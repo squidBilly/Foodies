@@ -27,6 +27,8 @@ export default function HomeScreen() {
     (food) => food.category === activeCategory
   );
 
+  // Retunr Build
+
   return (
     <View style={styles.container}>
       <StatusBar style="dark" />
@@ -52,9 +54,15 @@ export default function HomeScreen() {
           </Text>
         </View>
 
-        <View testID="categoryList"></View>
+        <View testID="categoryList">
+          <Categories
+            categories={categories}
+            activeCategory={activeCategory}
+            handleChangeCategory={handleChangeCategory}
+          />
+        </View>
 
-        <View testID="foodList"></View>
+        <View testID="foodList">{/* Dummie */}</View>
       </ScrollView>
     </View>
   );
