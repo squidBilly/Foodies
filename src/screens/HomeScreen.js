@@ -6,7 +6,7 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import Categories from "../components/categories";
-import FoodItems from "../components/recipes";
+import Recipe from "../components/recipes";
 import { arrayOfCategories, arrayOfAllFoods } from "../Utilities";
 
 export default function HomeScreen() {
@@ -61,8 +61,9 @@ export default function HomeScreen() {
             handleChangeCategory={handleChangeCategory}
           />
         </View>
-
-        <View testID="foodList">{/* Dummie */}</View>
+        <View testID="foodList">
+          <Recipe foods={filteredfoods} categories={categories} />
+        </View>
       </ScrollView>
     </View>
   );
